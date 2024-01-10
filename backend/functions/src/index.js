@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const router = require("./src/routes/router");
+const gameCollectionRouter = require("./routes/gameCollectionRouter");
 const functions = require("firebase-functions");
 require("dotenv/config");
 
@@ -17,11 +17,9 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use("/", router);
+app.use("/", gameCollectionRouter);
 
 app.use(express.json());
-
-app.use("/", router);
 
 // adding the port info
 const port = 4000;
@@ -31,5 +29,5 @@ const server = app.listen(port, () => {
 
 // export const api = functions.https.onRequest(app);
 
-module.exports = router;
+module.exports = gameCollectionRouter;
 // export default router;
