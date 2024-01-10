@@ -1,8 +1,8 @@
-import express from "express";
-import cors from "cors";
+const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
-const router = require("./routes/gameCollectionRouter");
-import * as functions from "firebase-functions";
+const router = require("./src/routes/router");
+const functions = require("firebase-functions");
 require("dotenv/config");
 
 const app = express();
@@ -31,5 +31,5 @@ const server = app.listen(port, () => {
 
 // export const api = functions.https.onRequest(app);
 
-// module.exports = router;
-export default router;
+module.exports = router;
+// export default router;

@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 
-export default interface gameCollectionInterface {
+export default interface GameCollectionInterface {
     _id?: ObjectId;
     Platform: string;
     Owned: number;

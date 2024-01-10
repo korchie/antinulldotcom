@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-import { getClient } from "../db";
+// import { getClient } from "../db";
+const getClient = require("../db");
+
 // import {MongoCl}
 // import { ObjectId } from "mongodb";
 // import GameCollectionInterface from "../models/GameCollectionInterface";
@@ -51,5 +53,5 @@ router.get("/gameCollection", (req, res) => {
   //   res.json(gameData);
 });
 
-// module.exports = router;
-export default router;
+module.exports = router;
+// export default router;
